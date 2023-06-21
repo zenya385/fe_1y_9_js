@@ -106,3 +106,52 @@ const fileName = 'styles.min.css, about.min.css, portfolio.min.css';
 console.log('newName:>>', newName);
 console.log('prodName:>>', prodName.slice(0, 6));
 console.log('fileName:>>', fileName.slice(0, fileName.length));
+
+const str = fileName.toLocaleUpperCase();
+const str1 = fileName.toUpperCase();
+
+const obj = {
+  name: 'Roman',
+  age: 15,
+  favorite: 'red',
+  isStudent: false,
+};
+
+const array = [
+  {
+    name: 'Roman',
+    age: 15,
+    favorite: 'red',
+    isStudent: false,
+  },
+  {
+    name: 'Sergio',
+    age: 20,
+    favorite: 'green',
+    isStudent: true,
+  },
+  {
+    name: 'Max',
+    age: 25,
+    favorite: 'yellow',
+    isStudent: false,
+  },
+];
+
+console.log('obj.name:>>', obj.name);
+console.log('obj.name:>>', array[2].favorite);
+
+document.body.style.backgroundColor = 'red';
+
+const mainHead = document.querySelector('#head');
+// const mainHead = document.querySelector('li');
+mainHead.textContent = 'Я змінив заголовок!!!';
+mainHead.style.color = 'yellowGreen';
+
+const item = document.querySelectorAll('li');
+item.forEach(li => {
+  li.classList.add('yellow-text');
+  li.style.color = 'white';
+});
+
+// console.log('item:>>', item);
