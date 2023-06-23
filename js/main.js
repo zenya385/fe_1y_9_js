@@ -27,10 +27,10 @@ const array = [
   },
 ];
 
-console.log('obj.name:>>', obj.name);
-console.log('obj.name:>>', array[2].favorite);
+// console.log('obj.name:>>', obj.name);
+// console.log('obj.name:>>', array[2].favorite);
 
-document.body.style.backgroundColor = 'red'; //Змінює фон нашої сторінки
+// document.body.style.backgroundColor = 'red'; //Змінює фон нашої сторінки
 
 const mainHead = document.querySelector('#head');
 // const mainHead = document.querySelector('li');
@@ -44,3 +44,37 @@ item.forEach(li => {
 });
 
 // console.log('item:>>', item);
+
+const str = 'qwerty';
+console.log('typeof:>>', typeof str);
+
+const magicBtn = document.querySelector('.magic-btn');
+
+magicBtn.addEventListener('click', () => {
+  const titleEl = document.querySelector('.title');
+  titleEl.style.fontSize = '50px';
+  titleEl.style.color = 'tomato';
+
+  const imageEl = document.querySelector('img');
+  imageEl.alt = 'я солоденький кексик';
+  imageEl.src =
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD0hrVafD5d6tPZwec3YCGbv7RaNo1ea70Kzs9t92O7P-0TpZwVEcctBqrdyywAmq9urs&usqp=CAU';
+  imageEl.title = 'тут якийсь опис картинки';
+});
+
+// const titleEl = document.querySelector('.title');
+// titleEl.style.fontSize = '50px';
+// titleEl.style.color = 'tomato';
+
+// const imageEl = document.querySelector('img');
+// imageEl.alt = 'я солоденький кексик';
+// imageEl.src =
+//   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD0hrVafD5d6tPZwec3YCGbv7RaNo1ea70Kzs9t92O7P-0TpZwVEcctBqrdyywAmq9urs&usqp=CAU';
+// imageEl.title = 'тут якийсь опис картинки';
+
+const paragraph = document.createElement('p');
+paragraph.textContent = 'lorem ipsym';
+paragraph.style.fontSize = '30px';
+paragraph.style.color = 'teal';
+magicBtn.before(paragraph);
+console.log('paragraph:>>', paragraph);
