@@ -19,7 +19,7 @@
       margin: 0 auto;
       padding-left: 15px;
       padding-right: 15px;
-      /* display: none; */
+      display: none;
     }
 
     .scre {
@@ -57,13 +57,35 @@
 
   <p class="view">Координати курсора: </p> -->
 
+  <!-- ===============modal-button==================== -->
+
+  <button type="button" class="btn" data-action="open-modal">Відкрити модалку</button>
+
+
+  <!-- ============== backdrop modal===================== -->
+  <div class="backdrop js-backdrop">
+    <div class="modal">
+      <h2>modal window</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae aliquam non distinctio modi
+        odit quia minima quisquam eius corrupti commodi quod molestias alias eligendi molestiae
+        dolor, iste aspernatur ad ea? Est id, voluptatem, architecto facilis ipsam, sint eius
+        tempora doloribus sunt iure voluptatibus iusto nobis nesciunt aut similique eveniet ducimus
+        dolorum alias incidunt culpa quaerat debitis eligendi reiciendis autem. Unde exercitationem
+        eveniet similique cupiditate quam quod maxime ex placeat fuga nesciunt soluta, beatae
+        aperiam dolor voluptatem, sed, error dignissimos consequuntur assumenda veritatis ipsam eius
+        eos ratione. Facilis placeat sed libero maiores dolorum esse eum id iste numquam
+        consequatur. Eum, facere.</p>
+      <button type="button" class="button" data-action="close-modal">закрити модалку</button>
+    </div>
+  </div>
+
+
   <!-- ================================================= -->
-  <div style="display: flex;">
-    <button onClick="func()" type="button" class="click">click</button>
+  <!-- <div style="display: flex;">
+    <button type="button" class="click">click</button>
     <button type="button" class="dblclick">dblclick</button>
     <button type="button" class="mouseover">mouseover</button>
     <button type="button" class="mouseout">mouseout</button>
-
   </div>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam delectus magni
     accusamus nulla ratione nostrum tempore eum consequuntur minima. Expedita sint vero vel nisi
@@ -89,12 +111,14 @@
     deleniti. Corrupti omnis commodi nobis, earum odio expedita, aspernatur velit eum, fugit nostrum
     neque officiis quam accusantium! Est velit aliquam maiores minima culpa cumque, quidem enim modi
     libero repudiandae dolor cum, asperiores quos totam dolores atque iure sint necessitatibus iusto
-    aspernatur. Recusandae suscipit earum exercitationem.</p>
+    aspernatur. Recusandae suscipit earum exercitationem.</p> -->
 
 
   </main>
   <!-- <script src="js/main.js" type="module"></script> -->
-  <script src="js/event.js"></script>
+  <script src="js/event.js" type="module"></script>
+  <script src="js/modal.js" type="module"></script>
+
 </body>
 
 </html>

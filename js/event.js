@@ -27,32 +27,32 @@
 // ============= mouseover dblclick mouseout scroll click==========================
 
 // const click = document.querySelector('.click');
-document.querySelector('.dblclick').addEventListener('dblclick', () => {
-  document.body.style.backgroundColor = 'yellow';
-});
-const mouseover = document.querySelector('.mouseover');
-const mouseout = document.querySelector('.mouseout');
+// document.querySelector('.dblclick').addEventListener('dblclick', () => {
+//   document.body.style.backgroundColor = 'yellow';
+// });
+// const mouseover = document.querySelector('.mouseover');
+// const mouseout = document.querySelector('.mouseout');
 
-function func() {
-  document.body.style.backgroundColor = 'red';
-}
+// function func() {
+//   document.body.style.backgroundColor = 'red';
+// }
 // click.addEventListener('click', () => {
 //   document.body.style.backgroundColor = 'red';
 // });
-addEventListener('dblclick', () => {
-  document.body.style.backgroundColor = 'yellow';
-});
-mouseover.addEventListener('mouseover', () => {
-  document.body.style.backgroundColor = 'grey';
-});
-mouseout.addEventListener('mouseout', () => {
-  document.body.style.backgroundColor = 'blue';
-});
-window.addEventListener('scroll', () => {
-  document.body.style.lineHeight = 2;
-  document.body.style.backgroundColor = 'yellowgreen';
-  document.body.style.color = 'green';
-});
+// addEventListener('dblclick', () => {
+//   document.body.style.backgroundColor = 'yellow';
+// });
+// mouseover.addEventListener('mouseover', () => {
+//   document.body.style.backgroundColor = 'grey';
+// });
+// mouseout.addEventListener('mouseout', () => {
+//   document.body.style.backgroundColor = 'blue';
+// });
+// window.addEventListener('scroll', () => {
+//   document.body.style.lineHeight = 2;
+//   document.body.style.backgroundColor = 'yellowgreen';
+//   document.body.style.color = 'green';
+// });
 
 // ===========================================================
 // ===========================================================
