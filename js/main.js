@@ -1,80 +1,22 @@
 'use strict';
-const obj = {
-  name: 'Roman',
-  age: 15,
-  favorite: 'red',
-  isStudent: false,
-};
 
-const array = [
-  {
-    name: 'Roman',
-    age: 15,
-    favorite: 'red',
-    isStudent: false,
-  },
-  {
-    name: 'Sergio',
-    age: 20,
-    favorite: 'green',
-    isStudent: true,
-  },
-  {
-    name: 'Max',
-    age: 25,
-    favorite: 'yellow',
-    isStudent: false,
-  },
-];
+// const num = 15;
+// const res = num < 10 && num > 20; //false
+// console.log('res:>>', res);
 
-// console.log('obj.name:>>', obj.name);
-// console.log('obj.name:>>', array[2].favorite);
+// true && true;
+// console.log('15===15 && 15!==15:>>', 15 === 15 && 15 !== 15);
+// console.log('15==="15" || 15!==15:>>', 15 === '15' || 15 === 15);
+// console.log('true && true:>>', true && true);
 
-// document.body.style.backgroundColor = 'red'; //Змінює фон нашої сторінки
+console.log('6 && 0:>>', 6 && 0); // 0
+console.log('0 && 6:>>', 0 && 6); // 0
+console.log('0 && null:>>', 0 && null); // 0
+console.log('null && :>>0', null && 0); // null
 
-const mainHead = document.querySelector('#head');
-// const mainHead = document.querySelector('li');
-mainHead.textContent = 'Я змінив заголовок!!!'; //Змінює заголовок h1
-mainHead.style.color = 'yellowGreen'; //Змінює колір заголовоку h1
+console.log('6 || 0:>>', 6 || 0); // 6
+console.log('0 || 6:>>', 0 || 6); // 6
+console.log('0 || null:>>', 0 || null); // null
+console.log('null || 0:>>', null || 0); // 0
 
-const item = document.querySelectorAll('li');
-item.forEach(li => {
-  li.classList.add('yellow-text'); // Добавляє клас yellow-text всім li
-  li.style.color = 'white'; //Змінює колір li
-});
-
-// console.log('item:>>', item);
-
-const str = 'qwerty';
-console.log('typeof:>>', typeof str);
-
-const magicBtn = document.querySelector('.magic-btn');
-
-magicBtn.addEventListener('click', () => {
-  const titleEl = document.querySelector('.title');
-  titleEl.style.fontSize = '50px';
-  titleEl.style.color = 'tomato';
-
-  const imageEl = document.querySelector('img');
-  imageEl.alt = 'я солоденький кексик';
-  imageEl.src =
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD0hrVafD5d6tPZwec3YCGbv7RaNo1ea70Kzs9t92O7P-0TpZwVEcctBqrdyywAmq9urs&usqp=CAU';
-  imageEl.title = 'тут якийсь опис картинки';
-});
-
-// const titleEl = document.querySelector('.title');
-// titleEl.style.fontSize = '50px';
-// titleEl.style.color = 'tomato';
-
-// const imageEl = document.querySelector('img');
-// imageEl.alt = 'я солоденький кексик';
-// imageEl.src =
-//   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD0hrVafD5d6tPZwec3YCGbv7RaNo1ea70Kzs9t92O7P-0TpZwVEcctBqrdyywAmq9urs&usqp=CAU';
-// imageEl.title = 'тут якийсь опис картинки';
-
-const paragraph = document.createElement('p');
-paragraph.textContent = 'lorem ipsym';
-paragraph.style.fontSize = '30px';
-paragraph.style.color = 'teal';
-magicBtn.before(paragraph);
-console.log('paragraph:>>', paragraph);
+//! 0, null, NaN, undefined, '', false - Ці значення прирівнюються до false, всі інші до true;
