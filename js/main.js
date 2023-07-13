@@ -152,6 +152,144 @@ const age = 15;
 
 // console.log(type); // "adult"
 
-type = age >= 18 ? 'adult' : 'child';
+// type = age >= 18 ? 'adult' : 'child';
 
-console.log('type:>>', type);
+// console.log('type:>>', type);
+
+// ============================== switch case ==================================
+// new Date().getDay() - Метод getDay()повертає день тижня як число від 0 до 6.
+//          Sunday Monday Tuesday Wednesday Thursday Friday Saturday
+
+// switch (значення) {
+//   case x:
+//     // тіло інструкції
+//     break;
+//   case y:
+//     // тіло інструкції
+//     break;
+//   default:
+//   // тіло інструкції
+// }
+
+// switch (значення) {
+//   case значення - 1:
+//     інструкції;
+//     break;
+
+//   case значення - 2:
+//     інструкції;
+//     break;
+
+//   default:
+//     інструкції;
+// }
+
+// let cost = null;
+
+// const subscription = 'premium2';
+
+// switch (subscription) {
+//   case 'free':
+//     cost = 0;
+//     break;
+
+//   case 'pro':
+//     cost = 100;
+//     break;
+
+//   case 'premium':
+//     cost = 500;
+//     break;
+
+//   default:
+//     console.log('Invalid subscription type');
+// }
+
+// console.log(cost);
+
+let day = '';
+
+switch (1) {
+  case 0:
+    day = 'Sunday';
+    break;
+  case 1:
+    day = 'Monday';
+
+    break;
+  case 2:
+    day = 'Tuesday';
+    break;
+  case 3:
+    day = 'Wednesday';
+    break;
+  case 4:
+    day = 'Thursday';
+    break;
+  case 5:
+    day = 'Friday';
+    break;
+  case 6:
+    day = 'Saturday';
+    break;
+
+  default:
+    console.log("it's not a day of the week");
+    break;
+}
+
+// console.log('day:>>', day);
+
+// let text = '';
+
+// switch (new Date().getDay()) {
+//   case 4:
+//   case 5:
+//     text = 'Soon it is Weekend';
+//     break;
+
+//   case 0:
+//   case 6:
+//     text = 'It is Weekend';
+//     break;
+
+//   default:
+//     console.log('Looking forward to the Weekend');
+//     break;
+// }
+
+// const animal = 'Giraffe';
+// let text;
+
+switch ('Giraffe') {
+  case 'Cow':
+    text = 'це тварина';
+    break;
+  case 'Giraffe':
+    text = 'це дика тварина';
+    break;
+  case 'Dog':
+    text = 'це домашня тварина';
+    break;
+  case 'Pig':
+    console.log('This animal is not extinct.');
+    break;
+  case 'Dinosaur':
+  default:
+    console.log('This animal is extinct.');
+}
+
+console.log('text:>>', text);
+
+console.log('varible:>>', varible);
+
+let varible = 'qwe';
+
+console.log('varible:>>', varible);
+
+if (true) {
+  const value = 5;
+  console.log('Block scope: ', value); // 5
+}
+
+console.log('Global scope: ', value); // 5
