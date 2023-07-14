@@ -207,36 +207,36 @@ const age = 15;
 
 // console.log(cost);
 
-let day = '';
+// let day = '';
 
-switch (1) {
-  case 0:
-    day = 'Sunday';
-    break;
-  case 1:
-    day = 'Monday';
+// switch (1) {
+//   case 0:
+//     day = 'Sunday';
+//     break;
+//   case 1:
+//     day = 'Monday';
 
-    break;
-  case 2:
-    day = 'Tuesday';
-    break;
-  case 3:
-    day = 'Wednesday';
-    break;
-  case 4:
-    day = 'Thursday';
-    break;
-  case 5:
-    day = 'Friday';
-    break;
-  case 6:
-    day = 'Saturday';
-    break;
+//     break;
+//   case 2:
+//     day = 'Tuesday';
+//     break;
+//   case 3:
+//     day = 'Wednesday';
+//     break;
+//   case 4:
+//     day = 'Thursday';
+//     break;
+//   case 5:
+//     day = 'Friday';
+//     break;
+//   case 6:
+//     day = 'Saturday';
+//     break;
 
-  default:
-    console.log("it's not a day of the week");
-    break;
-}
+//   default:
+//     console.log("it's not a day of the week");
+//     break;
+// }
 
 // console.log('day:>>', day);
 
@@ -261,35 +261,36 @@ switch (1) {
 // const animal = 'Giraffe';
 // let text;
 
-switch ('Giraffe') {
-  case 'Cow':
-    text = 'це тварина';
-    break;
-  case 'Giraffe':
-    text = 'це дика тварина';
-    break;
-  case 'Dog':
-    text = 'це домашня тварина';
-    break;
-  case 'Pig':
-    console.log('This animal is not extinct.');
-    break;
-  case 'Dinosaur':
-  default:
-    console.log('This animal is extinct.');
-}
+// switch ('Giraffe') {
+//   case 'Cow':
+//     text = 'це тварина';
+//     break;
+//   case 'Giraffe':
+//     text = 'це дика тварина';
+//     break;
+//   case 'Dog':
+//     text = 'це домашня тварина';
+//     break;
+//   case 'Pig':
+//     console.log('This animal is not extinct.');
+//     break;
+//   case 'Dinosaur':
+//   default:
+//     console.log('This animal is extinct.');
+// }
 
-console.log('text:>>', text);
+// console.log('text:>>', text);
 
-console.log('varible:>>', varible);
+// console.log('varible:>>', varible);
 
-let varible = 'qwe';
+// let varible = 'qwe';
 
-console.log('varible:>>', varible);
+// console.log('varible:>>', varible);
 
-if (true) {
-  const value = 5;
-  console.log('Block scope: ', value); // 5
-}
+// if (true) {
+//   const value = 5;
+//   console.log('Block scope: ', value); // 5
+// }
 
-console.log('Global scope: ', value); // 5
+// console.log('Global scope: ', value); // 5
+
