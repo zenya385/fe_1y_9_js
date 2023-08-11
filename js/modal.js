@@ -13,5 +13,7 @@ closeModalBtn.addEventListener('click', () => {
   body.classList.remove('show-modal');
 });
 backdrop.addEventListener('click', () => {
-  body.classList.remove('show-modal');
+  if (event.target === backdrop) {
+    body.classList.remove('show-modal');
+  }
 });
