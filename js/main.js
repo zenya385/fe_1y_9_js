@@ -630,18 +630,66 @@ const cart = {
   items: [],
   // метод який повертає карточку товару
   getItems() {
-    return this.items;
+    const { items } = this;
+    return items;
   },
   add(product) {
-    this.items.push(product);
+    const { items } = this;
+    // for (const item of items) {
+    //   if (item.name === product.name) {
+    //     item.quantity += 1;
+    //     return;
+    //   }
+    // }
+    // const newProduct = {
+    //   ...product,
+    //   quantity: 1,
+    // };
+    // items.push(newProduct);
+    items.push(product);
   },
   remove(prodactName) {
-    for (let i = 0; i < this.items.length; i++) {
-      const item = this.items[i];
+    const { items } = this;
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      // const {name} = items[i];
 
       if (item.name === prodactName) {
+        // if (name === prodactName) {
+        items.splice(i, 1);
         return console.log('знайшли');
-        this.items.splice(i, 1);
+      }
+    }
+  },
+
+  clear() {
+    this.items = [];
+  },
+
+  countTotalPrice() {
+    const { items } = this;
+    let totalPrice = 0;
+    for (const { price } of items) {
+      totalPrice += price;
+    }
+    return totalPrice;
+  },
+
+  increaseQuantity(productName) {
+    const { items } = this;
+    for (const product of items) {
+      if (product.name === productName) {
+        product.quantity = (product.quantity || 1) + 1;
+        break;
+      }
+    }
+  },
+  decreaseQuantity(productName) {
+    const { items } = this;
+    for (const product of items) {
+      if (product.name === productName) {
+        product.quantity = (product.quantity || 1) - 1;
+        break;
       }
     }
   },
@@ -659,7 +707,7 @@ cart.add({ name: '🍓', price: 110 });
 
 console.table(cart.getItems());
 
-// console.log('Total: ', cart.countTotalPrice());
+console.log('Total: ', cart.countTotalPrice());
 
 cart.remove('🍇');
 // console.table(cart.getItems());
@@ -669,9 +717,10 @@ cart.remove('🍇');
 
 // console.log('Total: ', cart.countTotalPrice());
 
-// cart.increaseQuantity('🍎');
-// console.table(cart.getItems());
+cart.increaseQuantity('🍎');
+cart.increaseQuantity('🍎');
+console.table(cart.getItems());
 
-// cart.decreaseQuantity('🍋');
-// cart.decreaseQuantity('🍋');
-// console.table(cart.getItems());
+cart.decreaseQuantity('🍋');
+cart.decreaseQuantity('🍋');
+console.table(cart.getItems());
