@@ -9,7 +9,7 @@ import cars from './cars.js';
 //* 3. Перебираючі методи масиву. forEach(), map(), filter(), find(), every(), some().
 
 //4 ====================== Імперативний код ==============================
-// Імперативний підхід
+// // Імперативний підхід
 // const numbers = [1, 2, 3, 4, 5];
 // const filteredNumbers = [];
 
@@ -21,6 +21,7 @@ import cars from './cars.js';
 // console.log(filteredNumbers); // [4, 5]
 //4 ====================== Декларативний код ==============================
 // Декларативний підхід
+
 // const numbers = [1, 2, 3, 4, 5];
 // const filteredNumbers = numbers.filter(value => value > 3);
 // console.log(filteredNumbers); // [4, 5]
@@ -38,6 +39,7 @@ import cars from './cars.js';
 // console.log('numbers:>>', numbers);
 
 //4 ====================== Чисті функції ==============================
+
 // const pureMultiplay = (array, value) => {
 //   const result = [];
 //   for (let i = 0; i < array.length; i += 1) {
@@ -52,12 +54,12 @@ import cars from './cars.js';
 // console.log('numbers:>>', numbers);
 
 //! ====================== Перебираючі методи масиву ==============================
-// const products = [
-//   { name: 'Радар', price: 1300, quantity: 4 },
-//   { name: 'Сканер', price: 2700, quantity: 3 },
-//   { name: 'Дроїд', price: 400, quantity: 7 },
-//   { name: 'Захоплення', price: 1200, quantity: 2 },
-// ];
+const products = [
+  { name: 'Радар', price: 1300, quantity: 4 },
+  { name: 'Сканер', price: 2700, quantity: 3 },
+  { name: 'Дроїд', price: 400, quantity: 7 },
+  { name: 'Захоплення', price: 1200, quantity: 2 },
+];
 //4 ====================== Метод forEach ==============================
 //3 використовується для заміни циклів for і for...of в роботі з колекцією даних.
 
@@ -88,14 +90,19 @@ import cars from './cars.js';
 //4 ====================== Метод map()  ==============================
 //3 Метод map(callback) використовується для трансформації масиву. Він викликає колбек-функцію для кожного елемента вихідного масиву, а результат її роботи записує у новий масив, який і буде результатом виконання методу.
 
+// console.log('numbers.map', numbers.map(number => number * 2))
+// console.log('numbers', numbers)
+// products.map((product)=>{console.log('product.name', product.name.toUpperCase())})
+
+
 //2 массив.map((element, index, array) => {
 //2   // Тіло колбек-функції
 //2 });
 
-//3 -Поелементо перебирає оригінальний масив.
-//3 -Не змінює оригінальний масив.
-//3 -Результат роботи колбек-функції записується у новий масив.
-//3 -Повертає новий масив однакової довжини.
+//3* -Поелементо перебирає оригінальний масив.
+//3* -Не змінює оригінальний масив.
+//3* -Результат роботи колбек-функції записується у новий масив.
+//3* -Повертає новий масив однакової довжини.
 
 // const upperNameofOobj = products.map(product => {
 //   const upper = product.name.toUpperCase();
@@ -124,11 +131,18 @@ import cars from './cars.js';
 //     return product;
 //   }
 // });
+
 // const namePerPriceMax = priceMax.map(product => {
 //   return product.name;
 // });
+
+//* аналог
+// const namePerPriceMax = products.filter(product => product.price > 1200).map(product => product.name);
+
+
 // console.log('priceMax:>>', priceMax);
 // console.log('namePerPriceMax:>>', namePerPriceMax);
+
 //4 ====================== Метод find() ==============================
 //3 Якщо метод filter(callback) використовується для пошуку всіх елементів, що задовольняють умову, то метод find(callback) дозволяє знайти і повернути перший відповідний елемент, після чого перебирання масиву припиняється. Тобто він шукає до першого збігу.
 
@@ -198,7 +212,7 @@ import cars from './cars.js';
 
 // підрахунок зарплати
 
-// const numbers = [5, 10, 15, 20, 25];
+const numbers = [5, 10, 15, 20, 25];
 
 // const total = numbers.reduce((acc, number) => {
 //   console.log('acc:>>', acc);
@@ -206,7 +220,7 @@ import cars from './cars.js';
 //   return acc + number;
 // }, 0);
 
-//3   аналог
+// 3   аналог
 // const total = numbers.reduce((acc, number) => acc + number, 0);
 // console.log('total:>>', total);
 
@@ -247,7 +261,7 @@ const players = [
 ];
 
 // const totalTime = players.reduce((acc, player) => {
-//   return acc + player.timePlayed;
+  // return acc + player.timePlayed;
 // }, 0);
 
 // const totalTime = players.reduce((acc, player) => acc + player.timePlayed, 0);
@@ -264,16 +278,16 @@ const tweets = [
   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
 ];
 
-// const allTegs = tweets.reduce((acc, tweet) => {
-//   // acc.push(tweet.tags);
-//   // return acc;
-//   return [...acc, ...tweet.tags];
-// }, []);
+const allTegs = tweets.reduce((acc, tweet) => {
+  // acc.push(tweet.tags);
+  // return acc;
+  return [...acc, ...tweet.tags];
+}, []);
 
 // аналог
 // const allTegs = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
 
-// console.log('allTegs:>>', allTegs);
+console.log('allTegs:>>', allTegs);
 
 //4 ====================== Метод sort() ==============================
 // Метод sort() сортує елементи масиву, але на відміну від інших методів перебирання, він сортує вихідний масив.
@@ -332,24 +346,24 @@ const students = [
   { name: 'Ківі', score: 94 },
 ];
 
-const inAscendingScoreOrder = [...students].sort(
-  (firstSt, secondSt) => firstSt.score - secondSt.score
-);
+// const inAscendingScoreOrder = [...students].sort(
+//   (firstSt, secondSt) => firstSt.score - secondSt.score
+// );
 
-console.log('inAscendingScoreOrder:>>', inAscendingScoreOrder);
+// console.log('inAscendingScoreOrder:>>', inAscendingScoreOrder);
 
-const inDescendingScoreOrder = [...students].sort(
-  (firstSt, secondSt) => secondSt.score - firstSt.score
-);
+// const inDescendingScoreOrder = [...students].sort(
+//   (firstSt, secondSt) => secondSt.score - firstSt.score
+// );
 
-console.log('inDescendingScoreOrder:>>', inDescendingScoreOrder);
+// console.log('inDescendingScoreOrder:>>', inDescendingScoreOrder);
 
-const inAlphabeticalOrder = [...students].sort((firstStName, secondStName) =>
-  firstStName.name.localeCompare(secondStName.name)
-);
-console.log('inAlphabeticalOrder:>>', inAlphabeticalOrder);
+// const inAlphabeticalOrder = [...students].sort((firstStName, secondStName) =>
+//   firstStName.name.localeCompare(secondStName.name)
+// );
+// console.log('inAlphabeticalOrder:>>', inAlphabeticalOrder);
 
-const inReverseOrder = [...students].sort((firstStName, secondStName) =>
-  secondStName.name.localeCompare(firstStName.name)
-);
-console.log('inReverseOrder:>>', inReverseOrder);
+// const inReverseOrder = [...students].sort((firstStName, secondStName) =>
+//   secondStName.name.localeCompare(firstStName.name)
+// );
+// console.log('inReverseOrder:>>', inReverseOrder);
