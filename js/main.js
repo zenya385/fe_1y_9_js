@@ -367,3 +367,8 @@ const students = [
 //   secondStName.name.localeCompare(firstStName.name)
 // );
 // console.log('inReverseOrder:>>', inReverseOrder);
+
+
+setTimeout(()=>document.body.style.background="red", 3000)
+
+setTimeout(()=>document.body.style.background="green", 6000)
