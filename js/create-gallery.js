@@ -1,35 +1,6 @@
-const pictures = [
-  {
-    width: 700,
-    height: 460,
-    url: 'https://picsum.photos/id/0/700/460',
-    alt: 'laptop',
-  },
-  {
-    width: 700,
-    height: 460,
-    url: 'https://picsum.photos/id/1/700/460',
-    alt: 'developer',
-  },
-  {
-    width: 700,
-    height: 460,
-    url: 'https://picsum.photos/id/10/700/460',
-    alt: 'forest',
-  },
-  {
-    width: 700,
-    height: 460,
-    url: 'https://picsum.photos/id/100/700/460',
-    alt: 'beach',
-  },
-  {
-    width: 700,
-    height: 460,
-    url: 'https://picsum.photos/id/1000/700/460',
-    alt: 'mountain',
-  },
-];
+import pictures from './data/pictures.js';
+
+// console.log('pictures', pictures);
 
 /*
 <li class="gallery-item">
@@ -39,20 +10,25 @@ const pictures = [
 </li>
 */
 
+// {
+//   width: 700,
+//   height: 460,
+//   url: 'https://picsum.photos/id/0/700/460',
+//   alt: 'laptop',
+// }
+
 const galleryListEl = document.querySelector('.js-gallery');
 
-// Функція для створення карточки makeGalleryCard(cardInfo)
-const makeGalleryCard = pictureInfo => {
-  const { width, height, alt, url } = pictureInfo;
-
+// Функція для створення карточки makeGalleryCard(pictures)
+// const makeGalleryCard = picture => {
+// const { width, height, url, alt } = picture;
+const makeGalleryCard = ({ width, height, url, alt }) => {
   // Створення li
   const galleryItemEl = document.createElement('li');
-
   galleryItemEl.classList.add('gallery-item');
 
   // Створення a
   const galleryLinkEl = document.createElement('a');
-
   galleryLinkEl.href = '#';
 
   galleryItemEl.append(galleryLinkEl);
@@ -70,10 +46,38 @@ const makeGalleryCard = pictureInfo => {
   return galleryItemEl;
 };
 
+// console.log('makeGalleryCard()', makeGalleryCard());
+
 // Перебір масиву pictures через map
-const galleryCardsArr = pictures.map(pictureInfo => makeGalleryCard(pictureInfo));
-
-console.log(galleryCardsArr);
-
+const galleryCardArr = pictures.map(picture => makeGalleryCard(picture));
+console.log('galleryCardArr', galleryCardArr);
 // Вставка колекції карток на сторінку
-galleryListEl.append(...galleryCardsArr);
+
+galleryListEl.append(...galleryCardArr);
+
+// console.log('galleryListEl', galleryListEl.append(galleryCardArr));
+
+
+
+//% ====================== DOM_2 ===============================
+
+const mango = {
+  username: 'Mango',
+  showUsername() {
+    console.log(this);
+    console.log(`My username is: ${this.username}`);
+  },
+};
+
+const btn = document.querySelector('.js-btn');
+
+// ✅ Працює
+mango.showUsername();
+
+// ❌ this буде посилатися на button, якщо використовувати showUsername як callback
+btn.addEventListener('click', mango.showUsername); // не працює
+
+// ✅ Не забувайте прив'язувати контекст методів об'єкта
+btn.addEventListener('click', mango.showUsername.bind(mango));
+
+

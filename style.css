@@ -28,6 +28,19 @@ ol {
 
 .header {
   padding: 50px 0;
+  color: #ff0000; /* ! */
+  color: #edf3e2; /* @ */
+  color: #464447; /* # */
+  color: #27a8cf; /* $ */
+  color: yellowgreen; /* % */
+  color: yellowgreen; /* ^ */
+  color: yellowgreen; /* & */
+  color: #2efa05;
+}
+
+.title {
+  color: red;
+  text-align: center;
 }
 
 .menu {
