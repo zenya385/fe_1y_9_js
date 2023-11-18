@@ -1,13 +1,45 @@
-// ========================== створеня елементу ===========================
+// іменування callback слухача
+// -  handle*: handleSubjectEvent
+// - *Handler: subjectEventHandler
+// -  on*: onSubjectEvent
 
-const heading = document.createElement('h1');
-console.log(heading); // <h1></h1>
 
-heading.textContent = 'This is a heading';
-console.dir(heading); // <h1>This is a heading</h1>
+const targetBtn = document.querySelector('.js-target-btn');
+const addListenerBtn = document.querySelector('.js-add-listener');
+const removeListenerBtn = document.querySelector('.js-remove-listener');
 
-const image = document.createElement('img');
-image.src =
-  'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2F&psig=AOvVaw22OCJ2YPXRUg2FzSk8ybYE&ust=1698945931966000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLizkvioo4IDFQAAAAAdAAAAABAE';
-image.alt = 'Nature';
-console.dir(image); // <img src="https://placeimg.com/640/480/nature" alt="Nature" />
+addListenerBtn.addEventListener('click', () => {
+  console.log('click on button:=>');
+  targetBtn.addEventListener('click', onTargetBtnClick);
+});
+
+removeListenerBtn.addEventListener('click', () => {
+  console.log('click on button:=>');
+  targetBtn.removeEventListener('click', onTargetBtnClick);
+});
+
+// function handleBtnClick() {
+//   console.log('Клік по цільовій кнопці');
+// }
+// function btnClickHandler() {
+//   console.log('Клік по цільовій кнопці');
+// }
+// function onTargetBtnClick() {
+//   console.log('Клік по цільовій кнопці');
+// }
+
+// ================= завдання =======================
+//      Додаткові завдання
+// Напишіть скрипт зміни кольору кнопки при натискані на неї.
+// Напиши скрипт реалізації додавання класу до заголовка при кліку на кнопку ‘Додати стилі’.
+// Написати програму яка буде виводити данні введені в інпут в інтерфейс сторінки.
+// Створити форму, після сабміту виводити на екран повідомлення ‘Ви зареєструвалися успішно! Дякую!’
+//      Творчі завдання
+// Створити кнопку на веб-сторінці, яка при натисканні на неї виводить повідомлення "Hello, world!" в спливаючому вікні.
+// Створити поле вводу на веб-сторінці, де користувач може ввести своє ім'я. При натисканні на кнопку "Привітатися" вивести в спливаючому вікні привітання з використанням введеного імені.
+// Створити кнопку на веб-сторінці, яка при натисканні на неї змінює колір фону сторінки на випадковий колір.
+// Створити кнопку на веб-сторінці, яка при натисканні на неї показує або приховує певний елемент на сторінці (наприклад, блок з текстом або зображення).
+// Створити функцію, яка вітає користувача при завантаженні сторінки. При виклику цієї функції вивести в спливаючому вікні привітання з використанням імені користувача.
+// Створити веб-сторінку з кнопками для збільшення та зменшення розміру шрифту тексту на сторінці. При натисканні на кнопку "Збільшити" збільшувати розмір шрифту на 2 пікселі, при натисканні на кнопку "Зменшити" - зменшувати на 2 пікселі.
+// Створити форму на веб-сторінці для введення інформації про користувача (ім'я, прізвище, адреса електронної пошти тощо). При натисканні на кнопку "Відправити" вивести в спливаючому вікні введену користувачем інформацію.
+// Створити на сторінці область для малювання з допомогою канвасу. Дозволити користувачу малювати
