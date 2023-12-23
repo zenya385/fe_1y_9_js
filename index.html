@@ -6,125 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      h1 {
-        text-align: center;
-        color: blueviolet;
-      }
-
-      h2 {
-        text-align: center;
-      }
-
-      img {
-        display: block;
-        margin: 0 auto;
-      }
-    </style>
   </head>
 
   <body>
-    <header class="header">
-      <a href="/" class="logo">LOGO</a>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <select name="interactive" id="" class="interactive">
-              <option value="all">Інтерактив</option>
-              <option value="item2">Числовий</option>
-              <option value="item2">Ігровий</option>
-              <option value="item2">Ознайомчий</option>
-            </select>
-          </li>
-
-          <li class="nav-item"><a href="">ietm2</a></li>
-          <li class="nav-item"><a href="">ietm3</a></li>
-        </ul>
-      </nav>
-    </header>
-    <h1>JavaScript</h1>
-
-    <h2>Привет страничка</h2>
-
-    <img
-      src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?auto=format&fit=crop&q=80&w=1472&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="coin bitcoin"
-      width="500"
-    />
-
-    <section class="scientist container">
-      <div class="scien-wrap">
-        <ul class="scien-list">
-          <li class="scien-item">
-            <h3 class="scien-name">Albert</h3>
-            <h3 class="scien-surname">Einstein</h3>
-            <p class="scien-text">born: 1879</p>
-            <p class="scien-subtext">dead: 1955</p>
-          </li>
-          <li class="scien-item">
-            <h3 class="scien-name">Albert</h3>
-            <h3 class="scien-surname">Einstein</h3>
-            <p class="scien-text">born: 1879</p>
-            <p class="scien-subtext">dead: 1955</p>
-          </li>
-          <li class="scien-item">
-            <h3 class="scien-name">Albert</h3>
-            <h3 class="scien-surname">Einstein</h3>
-            <p class="scien-text">born: 1879</p>
-            <p class="scien-subtext">dead: 1955</p>
-          </li>
-          <li class="scien-item">
-            <h3 class="scien-name">Albert</h3>
-            <h3 class="scien-surname">Einstein</h3>
-            <p class="scien-text">born: 1879</p>
-            <p class="scien-subtext">dead: 1955</p>
-          </li>
-          <li class="scien-item">
-            <h3 class="scien-name">Albert</h3>
-            <h3 class="scien-surname">Einstein</h3>
-            <p class="scien-text">born: 1879</p>
-            <p class="scien-subtext">dead: 1955</p>
-          </li>
-          <li class="scien-item">
-            <h3 class="scien-name">Albert</h3>
-            <h3 class="scien-surname">Einstein</h3>
-            <p class="scien-text">born: 1879</p>
-            <p class="scien-subtext">dead: 1955</p>
-          </li>
-          <li class="scien-item">
-            <h3 class="scien-name">Albert</h3>
-            <h3 class="scien-surname">Einstein</h3>
-            <p class="scien-text">born: 1879</p>
-            <p class="scien-subtext">dead: 1955</p>
-          </li>
-          <li class="scien-item">
-            <h3 class="scien-name">Albert</h3>
-            <h3 class="scien-surname">Einstein</h3>
-            <p class="scien-text">born: 1879</p>
-            <p class="scien-subtext">dead: 1955</p>
-          </li>
-          <li class="scien-item">
-            <h3 class="scien-name">Albert</h3>
-            <h3 class="scien-surname">Einstein</h3>
-            <p class="scien-text">born: 1879</p>
-            <p class="scien-subtext">dead: 1955</p>
-          </li>
-          <li class="scien-item">
-            <h3 class="scien-name">Albert</h3>
-            <h3 class="scien-surname">Einstein</h3>
-            <p class="scien-text">born: 1879</p>
-            <p class="scien-subtext">dead: 1955</p>
-          </li>
-          <li class="scien-item">
-            <h3 class="scien-name">Albert</h3>
-            <h3 class="scien-surname">Einstein</h3>
-            <p class="scien-text">born: 1879</p>
-            <p class="scien-subtext">dead: 1955</p>
-          </li>
-        </ul>
+    <div class="wrapper">
+      <div class="slider-team">
+        <div class="slider-team__item"><img src="img/popular1.jpg" alt="qwe" /></div>
+        <div class="slider-team__item"><img src="img/popular2.jpg" alt="qwe" /></div>
+        <div class="slider-team__item"><img src="img/popular3.jpg" alt="qwe" /></div>
+        <div class="slider-team__item"><img src="img/popular4.png" alt="qwe" /></div>
+        <div class="slider-team__item"><img src="img/popular4.png" alt="qwe" /></div>
+        <div class="slider-team__item"><img src="img/popular4.png" alt="qwe" /></div>
       </div>
-    </section>
-
-    <script src="js/main.js" type="module"></script>
+    </div>
+    <!-- npm install slick-carousel -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script type="module" src="js/slider.js"></script>
+    <!-- <script src="js/main.js" type="module"></script> -->
   </body>
 </html>
