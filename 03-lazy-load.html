@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+.<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Майстерня: Ліниве завантаження зображень</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <style>
       .feed {
         list-style: none;
@@ -16,17 +16,17 @@
       }
 
       .feed img {
-        transform: translateX(-50%);
+        /* transform: translateX(-50%);
         opacity: 0;
-        transition: all 500ms linear 500ms;
+        transition: all 500ms linear 500ms; */
         width: 640px;
         height: 480px;
         object-fit: cover;
       }
 
       .feed img.appear {
-        transform: translateX(0);
-        opacity: 1;
+        /* transform: translateX(0);
+        opacity: 1; */
       }
     </style>
   </head>
@@ -37,7 +37,7 @@
       <li class="feed__item">
         <img
           loading="lazy"
-          src="./images/avocado-cooked-delicious-dish-262959.jpg"
+          src="images/avocado-cooked-delicious-dish-262959.jpg"
           alt="avocado-cooked-delicious-dish"
           width="640"
           height="480"
