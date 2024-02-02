@@ -1,0 +1,19 @@
+{
+  "name": "fe_1y_9_js",
+  "version": "1.0.0",
+  "description": "project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "echo\"Привіт це запустився скрипт dev \""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "joi": "^17.12.1",
+    "shortid": "^2.2.16"
+  }
+}
