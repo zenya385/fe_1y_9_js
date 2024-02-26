@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Австралія",
+    "capital": "Канберра",
+    "currency": "Австралійский доллар (AUD)",
+    "language": "Англійска",
+    "population": 24970200,
+    "flag": "https://merkator.org.ua/wp-content/uploads/2021/12/avstralija-prapor-2021.png",
+    "infected": false
+  },
+  {
+    "name": "Болівія",
+    "capital": "Сукре",
+    "currency": "Болівіано (BOB)",
+    "language": "іспанский, кечуа, аймара, гуарани",
+    "population": 10461053,
+    "flag": "https://merkator.org.ua/wp-content/uploads/2021/12/bolivija-prapor-2021.png",
+    "infected": true
+  },
+  {
+    "name": "Великобританія",
+    "capital": "Лондон",
+    "currency": "Фунт стерлінг (GBP)",
+    "language": "Англійска",
+    "population": 63395574,
+    "flag": "https://merkator.org.ua/wp-content/uploads/2021/12/velyka-brytanija-prapor-2021.png",
+    "infected": false
+  },
+  {
+    "name": "Ямайка",
+    "capital": "Кінгстон",
+    "currency": "Ямайский доллар (JMD)",
+    "language": "Англійска",
+    "population": 2868380,
+    "flag": "https://merkator.org.ua/wp-content/uploads/2021/12/jamajka-prapor-2021.png",
+    "infected": false
+  },
+  {
+    "name": "Швеція",
+    "capital": "Стокгольм",
+    "currency": "Швецька крона (SEK)",
+    "language": "Швецька",
+    "population": 9723809,
+    "flag": "https://merkator.org.ua/wp-content/uploads/2021/12/shvecija-prapor-2021.png",
+    "infected": true
+  },
+  {
+    "name": "Португалія",
+    "capital": "Лісабон",
+    "currency": "Евро (EUR)",
+    "language": "Португальска",
+    "population": 10799270,
+    "flag": "https://merkator.org.ua/wp-content/uploads/2021/12/portuhalija-prapor-2021.png",
+    "infected": true
+  }
+]
