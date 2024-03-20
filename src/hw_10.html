@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>   hw-10</title>
+    <style>
+        .animated-list{
+            list-style: none;
+            width: 500px;
+            height: 500px;
+            /* border: 1px solid #000; */
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+        .animated-item {
+          width: 100px;
+          height: 100px;
+          list-style: none;
+          background-color: red;
+          /* position: absolute; */
+          margin-bottom: 50px;
+        }
+        .list-game{
+            display: flex;
+            justify-content: space-between;
+        }
+        .item-game{
+            display: inline-block;
+            width: 100px;
+            height: 100px;border: 1px solid #000;
+        }
+      </style>
+</head>
+<body>
+ <h2>Home work 10</h2>
+
+<h3>Завдання "Анімація елементів"</h3>
+<ul class="animated-list">
+    <li class="animated-item"></li>
+    <li class="animated-item"></li>
+    <li class="animated-item"></li>
+</ul>
+ <!-- <div  class="animated-element"></div>
+ <div class="animated-element"></div>
+ <div class="animated-element"></div> -->
+
+<h3>Завдання "Інтерактивна гра"</h3>
+<ul class="list-game">
+    <li class="item-game"></li>
+    <li class="item-game"></li>
+    <li class="item-game"></li>
+    <li class="item-game"></li>
+</ul>
+
+ <p id="score">Очки: 0</p>
+
+<h3>Завдання "Контроль часу"</h3>
+ <input type="number" id="input-time" placeholder="Введіть час у секундах">
+ <button id="start-button">Старт</button>
+
+
+
+ <script type="module" src="./js/hw_10.js"></script>
+</body>
+</html>
