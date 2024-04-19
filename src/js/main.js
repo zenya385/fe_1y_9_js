@@ -177,54 +177,54 @@
 // ================================= промісифікація функцій ==================================
 
 
-const makeGreeting = guestName => {
-  if (guestName === "" || guestName === undefined) {
-    return {
-      success: false,
-      message: "Guest name must not be empty",
-    };
-  }
+// const makeGreeting = guestName => {
+//   if (guestName === "" || guestName === undefined) {
+//     return {
+//       success: false,
+//       message: "Guest name must not be empty",
+//     };
+//   }
 
-  return {
-    success: true,
-    message: `Welcome ${guestName}`,
-  };
-};
+//   return {
+//     success: true,
+//     message: `Welcome ${guestName}`,
+//   };
+// };
 
-const result = makeGreeting("");
+// const result = makeGreeting("");
 
-if (result.success) {
-  console.log(result.message);
-} else {
-  console.error(result.message);
-}
+// if (result.success) {
+//   console.log(result.message);
+// } else {
+//   console.error(result.message);
+// }
 
-// ===================================================================
+// // ===================================================================
 
-const makeGreeting1 = (guestName, onSuccess, onError) => {
-  if (guestName === "" || guestName === undefined) {
-    return onError("Guest name must not be empty");
-  }
-  onSuccess(`Welcome ${guestName}`);
-};
+// const makeGreeting1 = (guestName, onSuccess, onError) => {
+//   if (guestName === "" || guestName === undefined) {
+//     return onError("Guest name must not be empty");
+//   }
+//   onSuccess(`Welcome ${guestName}`);
+// };
 
-makeGreeting1(
-  "Mango",
-  greeting => console.log(greeting),
-  error => console.error(error)
-);
+// makeGreeting1(
+//   "Mango",
+//   greeting => console.log(greeting),
+//   error => console.error(error)
+// );
 
 
-// ===================================================================
+// // ===================================================================
 
-const makeGreeting3 = guestName => {
-  if (guestName === "" || guestName === undefined) {
-    return Promise.reject("Guest name must not be empty");
-  }
+// const makeGreeting3 = guestName => {
+//   if (guestName === "" || guestName === undefined) {
+//     return Promise.reject("Guest name must not be empty");
+//   }
 
-  return Promise.resolve(`Welcome ${guestName}`);
-};
+//   return Promise.resolve(`Welcome ${guestName}`);
+// };
 
-makeGreeting3("Mango")
-  .then(greeting => console.log(greeting))
-  .catch(error => console.error(error));
+// makeGreeting3("Mango")
+//   .then(greeting => console.log(greeting))
+//   .catch(error => console.error(error));

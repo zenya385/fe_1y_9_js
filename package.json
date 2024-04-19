@@ -12,7 +12,8 @@
   "author": "Roman Zeno <zeno385@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.12.0"
+    "parcel": "^2.12.0",
+    "parcel-plugin-nuke-dist": "^1.0.1"
   },
   "dependencies": {
     "lodash.throttle": "^4.1.1"
