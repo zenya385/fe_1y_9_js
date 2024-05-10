@@ -1,41 +1,40 @@
+import articlesTpl from './templates/articles.handlebars';
 import './css/common.css';
+import NewsApiServices from './js/news-services';
+
+const serchForm = document.querySelector('.js-search-form');
+const loadMoreBtn = document.querySelector('[data-action="load-more"]');
+const articlesContainer = document.querySelector('.js-articles-container')
+
+serchForm.addEventListener('submit', onSearch);
+loadMoreBtn.addEventListener('click', onLoadMore);
+
+const newsApiServices = new NewsApiServices()
 
 
-const serchForm = document.querySelector('.js-search-form')
+function onSearch(evt) {
+  evt.preventDefault();
+  clearContainer()
+newsApiServices.query = evt.currentTarget.elements.query.value;
+newsApiServices.resetPage();
+// newsApiServices.fetchArticles().then(articles=>console.log('art :>> ', articles));
+newsApiServices.fetchArticles().then(appendArticlesMarkup);
 
-serchForm.addEventListener('submit', onSearch)
 
 
-
-function onSearch(e) {
-   e.preventDefault();
-   
- const searchQuery = e.currentTarget.elements.query.value;  
-
-const url = `https://newsapi.org/v2/everything?q=${searchQuery}&language=ru&pageSize=10&page=1`;
-
-const options = {
-headers: {
-    Authorization: "d0205bfe10a640c49097fdd9880f430c",
 }
+
+function onLoadMore() {
+  newsApiServices.fetchArticles().then(appendArticlesMarkup)
+  
 }
 
-   fetch(url, options)
-  .then(response => {
-    // Response handling
-    if (!response.ok) {
-        throw new Error(response.status);
-      }
-    // console.log('response', response)
-  return response.json();
-  })
-  .then(data => {
-    // Data handling
-    console.log('data', data)
-  })
-  .catch(error => {
-    // Error handling
-  });
+function appendArticlesMarkup(articles) {
+  articlesContainer.insertAdjacentHTML('beforeend', articlesTpl(articles))
 }
 
 
+function clearContainer() {
+  
+  articlesContainer.innerHTML = '';
+}

@@ -1,17 +1,13 @@
-{{!-- <div class="card">
-  <div class="card-img-top">
-    <img src="{{sprites.front_default}}" alt="{{name}}">
-  </div>
-  <div class="card-body">
-    <h2 class="card-title">Ім'я: {{name}}</h2>
-    <p class="card-text">Вага: {{weight}}</p>
-    <p class="card-text">Ріст: {{height}}</p>
 
-    <p class="card-text"><b>Уміння</b></p>
-    <ul class="list-group"></ul>
-    {{#each abilities}}
-      <li class="list-group-item">{{ability.name}}</li>
-    {{/each}}
-    </ul>
-  </div>
-</div> --}}
+{{#each this}}
+  <li>
+    <a href="{{url}}" target="_blank" rel="noopener noreferrer">
+      <article>
+        <img src="{{urlToImage}}" alt="" width="480">
+        <h2>{{title}}</h2>
+        <p>Posted by: {{author}}</p>
+        <p>{{description}}</p>
+      </article>
+    </a>
+  </li>
+{{/each}}
