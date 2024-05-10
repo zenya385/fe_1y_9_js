@@ -1,46 +1,46 @@
-import '../css/common.css';
-import pokemonCardTpl from '../templates/pokemon.handlebars';
+// import '../css/common.css';
+// import pokemonCardTpl from '../templates/pokemon.handlebars';
 
 
-const cardContainer = document.querySelector('.js-card-container')
-const searchForm = document.querySelector('.js-search-form')
+// const cardContainer = document.querySelector('.js-card-container')
+// const searchForm = document.querySelector('.js-search-form')
 
-searchForm.addEventListener("submit", onSearch)
+// searchForm.addEventListener("submit", onSearch)
 
-function onSearch(e) {
-  e.preventDefault()
-  const form = e.currentTarget;
- const serchQuery = form.elements.query.value; 
- console.log('serchQuery', serchQuery)
- fetchPokemon(serchQuery)
- .then(renderPokemonCard)
- .catch(onFetchError)
- .finally(
-  ()=> form.reset()
-);
-}
-
-
+// function onSearch(e) {
+//   e.preventDefault()
+//   const form = e.currentTarget;
+//  const serchQuery = form.elements.query.value; 
+//  console.log('serchQuery', serchQuery)
+//  fetchPokemon(serchQuery)
+//  .then(renderPokemonCard)
+//  .catch(onFetchError)
+//  .finally(
+//   ()=> form.reset()
+// );
+// }
 
 
-  function fetchPokemon (pokemonId) {
-   return  fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
-   .then(response => {
-       if (!response.ok) {
-         throw new Error(response.status);
-       }
-       return response.json();
-     })
-  }
 
-  function renderPokemonCard(pokemon) {
-    const makrup = pokemonCardTpl(pokemon);
-cardContainer.innerHTML = makrup;
-  }
 
-  function onFetchError(error) {
-    alert("Упс, все зламалось. Немає покемона з таким ім'ям.")
-  }
+//   function fetchPokemon (pokemonId) {
+//    return  fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
+//    .then(response => {
+//        if (!response.ok) {
+//          throw new Error(response.status);
+//        }
+//        return response.json();
+//      })
+//   }
+
+//   function renderPokemonCard(pokemon) {
+//     const makrup = pokemonCardTpl(pokemon);
+// cardContainer.innerHTML = makrup;
+//   }
+
+//   function onFetchError(error) {
+//     alert("Упс, все зламалось. Немає покемона з таким ім'ям.")
+//   }
 // ============================================================================
 
 
@@ -50,10 +50,10 @@ cardContainer.innerHTML = makrup;
 
 
 
-const url = 'https://api.privatbank.ua/p24api/exchange_rates?date=01.03.2023';
-const option = {
-  headers: {
-    'Access-Control-Allow-Origin': " "
-  }
-}
-fetch(url,option).then(console.log)
+// const url = 'https://api.privatbank.ua/p24api/exchange_rates?date=01.03.2023';
+// const option = {
+//   headers: {
+//     'Access-Control-Allow-Origin': " "
+//   }
+// }
+// fetch(url,option).then(console.log)
