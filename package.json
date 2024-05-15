@@ -5,7 +5,8 @@
   "source": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/*.html"
+    "start": "parcel src/*.html",
+    "server": "json-server db.json -p 5555"
   },
   "keywords": [],
   "author": "Roman Zeno <zeno385@gmail.com>",
@@ -20,6 +21,7 @@
     "@parcel/optimizer-data-url": "^2.12.0",
     "@parcel/packager-raw-url": "^2.12.0",
     "handlebars": "^4.7.8",
+    "json-server": "^1.0.0-beta.0",
     "parcel-transformer-hbs": "^1.0.4"
   },
   "parcelDependencies": {
