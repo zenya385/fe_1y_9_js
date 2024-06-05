@@ -1,0 +1,20 @@
+{
+  "name": "fe_1y_9_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "json-server --watch src/data/db.json --port 5555",
+    "start": "parcel src/index.html"
+  },
+  "keywords": [],
+  "author": "Roman Zeno <zeno385@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
