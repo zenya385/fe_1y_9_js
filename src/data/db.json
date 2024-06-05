@@ -1,14 +1,24 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "a title",
-      "vcontentiews": 100
+      "id": "21ab",
+      "title": "First post",
+      "content": "Hi, my first post"
     },
     {
-      "id": "2",
-      "title": "another title",
-      "content": 200
+      "id": "ad97",
+      "title": "Post animals",
+      "content": "HI,my animals!"
+    },
+    {
+      "id": "c760",
+      "title": "as",
+      "content": "as"
+    },
+    {
+      "title": "Замінили новий заголововок",
+      "content": "Замінили зміст про котиків",
+      "id": "89e6"
     }
   ],
   "comments": [
@@ -29,7 +39,5 @@
       "postId": 7111,
       "comment": "llorem_10 lorem_10 lorem_10 lorem_10 "
     }
-    
-    
   ]
 }

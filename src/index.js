@@ -111,11 +111,10 @@ async function createComment(postId, comment) {
 
 // createComment( 7111 ,'llorem_10 lorem_10 lorem_10 lorem_10 ')
 
-// Оновлення відображення постів на сторінці
+//*================== Оновлення відображення постів на сторінці
 
 function renderPosts(posts) {
   const postContanier = document.querySelector('#postsContainer');
-  
   postContanier.innerHTML = '';
 
   posts.forEach(post => {
@@ -143,16 +142,16 @@ postContanier.appendChild(postElement)
 
 // getPosts().then(res=>res.json()).then(posts=>console.log('posts :>> ', posts));
 
-
+// ============== Рендер постів (відмальовування)   ==============
 // renderPosts([
 //   {
 //     "id": "1",
-//     "title": "a title",
+//     "title": "Це заголовок",
 //     "vcontentiews": 100
 //   },
 //   {
 //         "id": "2",
-//     "title": "another title",
+//     "title": "Інший заголовок",
 //     "content": 200
 //   },
 //   {
@@ -161,13 +160,36 @@ postContanier.appendChild(postElement)
 //     "content": 200
 //   }])
 
-// Обробник події для створення поста
+//*======================= Обробник події для створення поста
 
-// document.getElementById('createPostForm').addEventListener('submit', cb);
+document.getElementById('createPostForm').addEventListener('submit', createPostFromForm);
 
-// Обробник події для редагування поста
+async function createPostFromForm(event) {
+  event.preventDefault()
+  const title = document.querySelector("#titleInput").value;
+  // console.log('title :>> ', title);
+  const content = document.querySelector("#contentInput").value;
+  // console.log('content :>> ', content);
+  await createPost(title, content);
+  const posts = await getPosts()
+  renderPosts(posts)
+}
 
-// document.addEventListener('click', cb);
+//* ============== Обробник події для редагування поста
+
+document.addEventListener('click', editPost);
+
+async function editPost(event) {
+  // event.preventDefault();
+  if(event.target.classList.contains('editPostButton')){
+const id = event.target.dataset.id;
+const title = prompt('Новий заголовок')
+const content = prompt('Новий зміст')
+await updatePost(id, title, content)
+const posts = await getPosts()
+  renderPosts(posts)
+  }
+}
 
 // Обробник події для видалення поста
 
