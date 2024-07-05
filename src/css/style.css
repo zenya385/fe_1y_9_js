@@ -1,0 +1,129 @@
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+padding: 0;
+overflow: hidden;
+border: 0;
+clip: rect(0 0 0 0);
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal
+} */
+
+ul {
+  list-style: none
+}
+
+button,
+input,
+select {
+  margin: 0
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box
+}
+
+img,
+video {
+  display: block;
+  height: auto;
+  max-width: 100%
+}
+
+iframe {
+  border: 0
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+td,
+th {
+  padding: 0
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+
+  /* font-family: 'Jost'; */
+  /* font-size: 22px; */
+}
+header{
+    background-color: #75d422;
+
+}
+
+/** / футер прикріплений до низу сайту  body {display: flex;flex-direction: column;height: 100vh;min-height: 100vh;} */
+main {
+    background-color: #ec114b;
+  flex: 1 0 auto;
+}
+footer{
+    background-color: #11a1e3;
+
+}
+
+/** /контейнер для центрування контенту, розміри згідно макету/ */
+/* .container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+} */
+
+/** // візуально приховати елементи */
+/* .visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+padding: 0;
+overflow: hidden;
+border: 0;
+clip: rect(0 0 0 0);
+} */
+
+
+
+
+  /* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> */

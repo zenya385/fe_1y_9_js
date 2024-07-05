@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": "21ab",
+      "title": "First post",
+      "content": "Hi, my first post"
+    },
+    {
+      "id": "ad97",
+      "title": "Post animals",
+      "content": "HI,my animals!"
+    },
+    {
+      "title": "Замінили новий заголововок",
+      "content": "Замінили зміст про котиків",
+      "id": "89e6"
+    },
+    {
+      "id": "3703",
+      "title": "Заголовок",
+      "content": "Текст якийсь"
+    }
+  ],
+  "comments": [
+    {
+      "id": "dbcf",
+      "postId": "3703",
+      "comment": ""
+    },
+    {
+      "id": "02a3",
+      "postId": null,
+      "comment": ""
+    },
+    {
+      "id": "880c",
+      "postId": null,
+      "comment": ""
+    }
+  ]
+}
