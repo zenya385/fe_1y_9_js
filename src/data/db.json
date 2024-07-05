@@ -11,33 +11,31 @@
       "content": "HI,my animals!"
     },
     {
-      "id": "c760",
-      "title": "as",
-      "content": "as"
-    },
-    {
       "title": "Замінили новий заголововок",
       "content": "Замінили зміст про котиків",
       "id": "89e6"
+    },
+    {
+      "id": "3703",
+      "title": "Заголовок",
+      "content": "Текст якийсь"
     }
   ],
   "comments": [
     {
-      "id": "f7f8"
+      "id": "dbcf",
+      "postId": "3703",
+      "comment": ""
     },
     {
-      "id": "9b95",
-      "postId": "llorem_10 lorem_10 lorem_10 lorem_10 "
+      "id": "02a3",
+      "postId": null,
+      "comment": ""
     },
     {
-      "id": "d365",
-      "postId": 7111,
-      "comment": "llorem_10 lorem_10 lorem_10 lorem_10 "
-    },
-    {
-      "id": "89e1",
-      "postId": 7111,
-      "comment": "llorem_10 lorem_10 lorem_10 lorem_10 "
+      "id": "880c",
+      "postId": null,
+      "comment": ""
     }
   ]
 }

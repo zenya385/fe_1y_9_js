@@ -34,7 +34,7 @@ async function createPost(title, content) {
       throw new Error("Відповідь від бекенду була невдалою");
     }
     const data = await response.json();
-    console.log("data :>> ", data);
+    // console.log("data :>> ", data);
     return data;
   } catch (error) {
     console.error(error);
@@ -109,7 +109,7 @@ async function createComment(postId, comment) {
   }
 }
 
-// createComment( 7111 ,'llorem_10 lorem_10 lorem_10 lorem_10 ')
+// createComment( "ad97" ,'ertyuhij0 ')
 
 //*================== Оновлення відображення постів на сторінці
 
@@ -132,7 +132,7 @@ postElement.innerHTML=`
   </ul>
   <form class="createCommentForm">
   <input type="text" class="commentInput" placeholder="Новий коментар" required>
-  <button type="submit">Додати коментар</button>
+  <button type="submit" class="addBtnComment">Додати коментар</button>
   </form>
   </div>
 ` 
@@ -189,21 +189,49 @@ await updatePost(id, title, content)
 const posts = await getPosts()
   renderPosts(posts)
   }
+  //* ==================Обробник події для видалення поста =============
+  if(event.target.classList.contains('deletePostButton')){
+    const id = event.target.dataset.id;
+    await deletePost(id);
+    const posts = await getPosts()
+    renderPosts(posts)
+}
 }
 
-// Обробник події для видалення поста
+// document.addEventListener('click', deletePostFromList);
 
-// document.addEventListener('click', cb);
+// async function deletePostFromList(event) {
+// const id = event.target.dataset.id;
+// // console.log('id :>> ', id);
+// await deletePost(id);
+// const posts = await getPosts()
+// renderPosts(posts)
+// }
 
-// Обробник події для додавання коментаря
+//* =========== Обробник події для додавання коментаря ==========
 
-// document.addEventListener('submit', cb);
+// const addCommentBtn = document.querySelector('.addBtnComment')
 
+document.addEventListener('submit', addComment);
+
+  async function addComment(event) {
+if(event.target.classList.contains('createCommentForm')){
+  event.preventDefault();
+  // const id = event.target.dataset.id;
+  const postId =  event.target.closest('.commentsContainer').dataset.id;
+  console.log('postId :>> ', postId);
+  const comment =  event.target.document.querySelector('.commentInput').value;
+  console.log('comment :>> ', comment);
+ await createComment(postId, comment);
+ const posts = await getPosts()
+renderPosts(posts)
+}
+}
 // Запуск додатку
 
 async function startApp() {
-  // const posts = await getPosts();
-  // renderPosts(posts);
+  const posts = await getPosts();
+  renderPosts(posts);
 }
 
-// startApp();
+startApp();

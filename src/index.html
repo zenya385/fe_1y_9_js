@@ -3,18 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Blog</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
+    <header>
+      <h2>header</h2>
+    </header>
+    <main>
         <h1>Блог</h1>
 
-        <form id="createPostForm">
+        <form id="createPostForm" >
           <input type="text" data-id="title" id="titleInput" placeholder="Заголовок" required />
           <textarea id="contentInput" data-id="content" placeholder="Зміст" required></textarea>
           <button type="submit">Створити пост</button>
         </form>
         <div id="postsContainer"></div>
-
+      </main>
+      <footer>
+        <h2>fooetr</h2>
+      </footer>
         <script type="module" src="index.js"></script>
       </body>
     </html>
